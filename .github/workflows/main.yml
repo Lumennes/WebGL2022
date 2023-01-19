@@ -55,8 +55,9 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Library
-          key: Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }}
+          key: Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }}-${{ matrix.unityVersion }}
           restore-keys: |
+            Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectName }}-ubuntu-
             Library-
 
